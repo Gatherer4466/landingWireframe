@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dansk Styrkeløft Forbund</title>
+  <link rel="icon" href="https://cdn.7tv.app/emote/01JPDVM80X7P6HWDX18N0WHZCG/4x.gif">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+  <style>
+
+.hljs {
+  background: #051626 !important;
+  color: #d6deeb !important;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #697098 !important;
+  font-style: italic !important;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id {
+  color: #82aaff !important;
+}
+
+.hljs-selector-class {
+  color: #cce288 !important
+}
+
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-type,
+.hljs-params {
+  color: #e99173 !important;
+}
+
+.hljs-literal {
+  color: #e76276 !important;
+}
+
+.hljs-string,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #d8bb8d !important;
+}
+
+.hljs-keyword,
+.hljs-title,
+.hljs-section,
+.hljs-doctag {
+  color: #ffcb6b !important;
+}
+
+.hljs-attr {
+  color: #95d9cb !important;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #bbc2cf !important;
+}
+
+    .hero {
+      background: #f8f9fa;
+      padding: 120px 0;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .footer {
+      background: #111;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .btn-primary {
+      background-color: #c40000;
+      border-color: #c40000;
+    }
+
+    .btn-primary:hover {
+      background-color: #a00000;
+      border-color: #a00000;
+    }
+
+    .sponsor-logo {
+      max-height: 70px;
+      opacity: 0.8;
+      transition: 0.2s ease;
+    }
+
+    .sponsor-logo:hover {
+      opacity: 1;
+    }
+
+    .header-logo {
+      max-height: 80px;
+    }
+
+    pre {
+      border-radius: 10px;
+      padding: 25px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">
+      <img src="https://styrke.dk/images/header.png" 
+           alt="Dansk Styrkeløft Forbund" 
+           class="header-logo img-fluid">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Stævner</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Resultater</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Klubber</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Forbundet</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-5 mb-3">Danmarks officielle styrkeløftforbund</h1>
+    <p class="lead text-muted mb-4">Stævner, resultater og klubber samlet ét sted.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="#" class="btn btn-primary btn-lg">Find en klub</a>
+      <a href="#" class="btn btn-outline-danger btn-lg">Se kommende stævner</a>
+    </div>
+  </div>
+</section>
+
+<div class="text-center my-5">
+  <button id="toggleCodeBtn" class="btn btn-outline-danger">
+    Vis kode
+  </button>
+</div>
+
+<section id="codeSection" class="section-padding bg-light" style="display:none;">
+  <div class="container">
+    <h2 class="mb-4 text-center">HTML Kildekode</h2>
+    <pre><code class="language-html" id="codeBlock"></code></pre>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5>Bliv medlem</h5>
+            <p>Find en klub og start din rejse i styrkeløft.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5>Kommende stævner</h5>
+            <p>Se kalender og tilmeldingsfrister.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5>Resultater & ranglister</h5>
+            <p>Se rekorder og officielle ranglister.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5">Officielle Partnere</h2>
+
+    <div class="row justify-content-center align-items-center g-5">
+
+      <div class="col-md-4">
+        <a href="#" class="text-decoration-none text-dark">
+          <img src="https://styrke.dk/img/partnere/er-eq_logo2.jpg"
+               alt="ER Equipment"
+               class="img-fluid mb-3"
+               style="max-height: 80px;">
+          <h5 class="fw-semibold">ER Equipment</h5>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="text-decoration-none text-dark">
+          <img src="https://styrke.dk/img/partnere/A7Logo2.jpg"
+               alt="A7 - IPF Approved"
+               class="img-fluid mb-3"
+               style="max-height: 80px;">
+          <h5 class="fw-semibold">A7 – IPF Approved</h5>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container">
+
+    <div class="row text-center text-md-start">
+
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold mb-3">Dansk Styrkeløft Forbund</h6>
+        <p class="small">
+          Danmarks officielle forbund for styrkeløft.
+        </p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold mb-3">Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="text-white text-decoration-none">Stævner</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Resultater</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Find en klub</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold mb-3">Fair Sport</h6>
+        <p class="small">
+          Dansk Styrkeløft Forbund arbejder aktivt for en ren og fair sport.
+        </p>
+        <a href="#" class="btn btn-outline-light btn-sm">
+          Se Anti-Doping Politik
+        </a>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <div class="text-center small">
+      © 2026 Dansk Styrkeløft Forbund · Medlem af IPF & European Powerlifting Federation
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<script>
+const btn = document.getElementById("toggleCodeBtn");
+const section = document.getElementById("codeSection");
+const codeBlock = document.getElementById("codeBlock");
+
+let loaded = false;
+
+btn.addEventListener("click", () => {
+  const isVisible = section.style.display === "block";
+
+  section.style.display = isVisible ? "none" : "block";
+  btn.textContent = isVisible ? "Vis kode" : "Skjul kode";
+
+  if (!loaded) {
+    codeBlock.textContent = document.documentElement.outerHTML;
+    hljs.highlightElement(codeBlock);
+    loaded = true;
+  }
+});
+</script>
+
+</body>
+</html>
